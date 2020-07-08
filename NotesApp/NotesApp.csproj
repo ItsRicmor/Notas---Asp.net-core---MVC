@@ -27,7 +27,4 @@
     <Folder Include="Views\Shared\Components\" />
     <Folder Include="Views\Shared\Components\NoteWall\" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Remove="Views\Shared\Components\NoteWall\Default.cshtml" />
-  </ItemGroup>
 </Project>
