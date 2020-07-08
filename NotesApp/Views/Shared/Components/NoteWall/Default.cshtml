@@ -1,0 +1,12 @@
+﻿@model IEnumerable<NotesApp.Core.Models.NoteModel>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Muro</div>
+
+    <ul class="list-group">
+        @foreach (var note in Model)
+        {
+            <li class="list-group-item">@note.Title</li>
+        }
+    </ul>
+</div>
