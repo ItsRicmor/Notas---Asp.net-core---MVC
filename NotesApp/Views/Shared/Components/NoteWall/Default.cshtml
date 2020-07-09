@@ -1,12 +1,10 @@
-﻿@model IEnumerable<NotesApp.Core.Models.NoteModel>
+﻿@model IEnumerable<NoteModel>
 
-<div class="panel panel-default">
-    <div class="panel-heading">Muro</div>
-
-    <ul class="list-group">
+<div class="mt-4"  style="background-color:#CECECE;height: 400px; width: 100%;">
+    <div class="d-flex justify-content-start">
         @foreach (var note in Model)
         {
-            <li class="list-group-item">@note.Title</li>
+            @await Component.InvokeAsync("NoteItem", note)
         }
-    </ul>
+    </div>
 </div>

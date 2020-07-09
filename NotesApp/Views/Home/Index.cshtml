@@ -4,7 +4,6 @@
 
 <div class="text-center">
     <h2>Escribe una Nota</h2>
-    <p>Notas</p>
-
+    @await Component.InvokeAsync("NoteForm")
     @await Component.InvokeAsync("NoteWall")
 </div>

@@ -24,5 +24,8 @@
     <Folder Include="Components\" />
     <Folder Include="Views\Shared\Components\" />
     <Folder Include="Views\Shared\Components\NoteWall\" />
+    <Folder Include="Views\Shared\Components\NoteForm\" />
+    <Folder Include="Views\Shared\Components\NoteItem\" />
+    <Folder Include="wwwroot\js\note\" />
   </ItemGroup>
 </Project>
