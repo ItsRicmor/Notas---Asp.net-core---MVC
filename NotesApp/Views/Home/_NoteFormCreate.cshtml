@@ -1,0 +1,29 @@
+@model NotesApp.ViewElements.Models.CreateNoteViewModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<h2>Crear una Nota</h2>
+
+<div class="row mt-4">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+        <form asp-controller="Home" asp-action="Create" method="post">
+            <div class="form-group">
+                <input asp-for="@Model.Title" class="form-control" placeholder="Titulo de nota">
+            </div>
+            <div class="form-group">
+                <textarea asp-for="@Model.Description" class="form-control" rows="3" placeholder="Descripción">
+                </textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Crear</button>
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        </form>
+    </div>
+    <div class="col-sm">
+    </div>
+</div>

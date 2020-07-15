@@ -1,0 +1,16 @@
+﻿@model NoteModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<div class="card m-2 shadow-sm p-3 mb-5 bg-white rounded" style="width: 14rem;" data-id="@Model.Id">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Title</h5>
+        <p class="card-text">@Model.Description</p>
+        <a href="javascript:void(0)" class="card-link note-button-edit-card">Editar</a>
+        <a href="javascript:void(0)" class="card-link note-button-delete-card">Eliminar</a>
+    </div>
+</div>

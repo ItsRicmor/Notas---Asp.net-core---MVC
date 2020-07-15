@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NotesApp.Core.Services;
 
-namespace NotesApp.Components
+namespace NotesApp.ViewElements.Components
 {
     [ViewComponent(Name = "NoteWall")]
     public class NoteWallViewComponent : ViewComponent

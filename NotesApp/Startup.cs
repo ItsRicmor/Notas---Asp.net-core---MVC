@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -26,7 +27,7 @@ namespace NotesApp
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-
+            services.AddAutoMapper(typeof(Startup));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddTransient<INotesService, NotesService>();
 

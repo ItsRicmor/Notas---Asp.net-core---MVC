@@ -1,9 +1,12 @@
-﻿@{
+﻿@model NotesApp.ViewElements.Models.CreateNoteViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h2>Escribe una Nota</h2>
-    @await Component.InvokeAsync("NoteForm")
+
+    <div id="FormNote">
+        @await Html.PartialAsync("_NoteFormCreate", Model)
+    </div>
     @await Component.InvokeAsync("NoteWall")
 </div>

@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<NoteModel>
 
-<div class="mt-4"  style="background-color:#CECECE;height: 400px; width: 100%;">
-    <div class="d-flex justify-content-start">
-        @foreach (var note in Model)
-        {
-            @await Component.InvokeAsync("NoteItem", note)
-        }
+    <div class="mt-4" style="background-color:#CECECE;height: 350px; width: 100%; overflow-x: auto;">
+        <div class="d-flex flex-wrap justify-content-around">
+            @foreach (var note in Model)
+            {
+                @await Html.PartialAsync("_NoteItem", note)
+            }
+        </div>
     </div>
-</div>
